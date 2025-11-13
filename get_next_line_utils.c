@@ -6,7 +6,7 @@
 /*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 15:52:18 by anis              #+#    #+#             */
-/*   Updated: 2025/10/25 19:59:11 by anis             ###   ########.fr       */
+/*   Updated: 2025/11/07 17:22:06 by anis             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ char	*ft_strdup(const char *s)
 	int		i;
 	int		len;
 
-	i = 0;
-	len = ft_strlen(s);
 	if (s == NULL)
 		return (NULL);
+	len = ft_strlen(s);
 	new = (char *)malloc(len +1);
 	if (new == NULL)
 		return (NULL);
+	i = 0;
 	while (s[i])
 	{
 		new[i] = s[i];

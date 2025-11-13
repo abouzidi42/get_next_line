@@ -6,7 +6,7 @@
 /*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 19:36:16 by anis              #+#    #+#             */
-/*   Updated: 2025/10/25 21:42:03 by anis             ###   ########.fr       */
+/*   Updated: 2025/11/13 15:34:32 by anis             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ char	*get_next_line(int fd)
 			return (ret_free(&tmp));
 		read_bytes = read(fd, buff, BUFFER_SIZE);
 		if (read_bytes <= 0)
-			break ;
+			return (freethis(&tmp, &buff, read_bytes));
 		buff[read_bytes] = '\0';
 		tmp = verify(tmp, buff);
 		free(buff);
